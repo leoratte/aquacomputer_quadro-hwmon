@@ -31,4 +31,21 @@ Fan3 current:   5.00 mA
 Fan4 current:   5.00 mA 
 ```
 
+## Install
+
+Go into the directory and simply run
+```
+make
+```
+and load the module by running (as a root)
+```
+insmod aquacomputer-quadro.ko
+```
+
+To remove the module simply run
+```
+rmmod aquacomputer-quadro.ko
+```
+
+
 based on [aquacomputer_d5next](https://github.com/aleksamagicka/aquacomputer_d5next-hwmon)
