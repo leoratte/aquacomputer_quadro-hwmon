@@ -63,7 +63,7 @@
 #define L_TEMP3				"Temp3"
 #define L_TEMP4				"Temp4"
 
-#define L_FLOW_SPEED		"Flow speed"
+#define L_FLOW_SPEED		"Flow speed [l/h]"
 #define L_FAN1_SPEED		"Fan1 speed"
 #define L_FAN2_SPEED		"Fan2 speed"
 #define L_FAN3_SPEED		"Fan3 speed"
@@ -249,7 +249,7 @@ static int quadro_raw_event(struct hid_device *hdev, struct hid_report *report, 
 	priv->temp_input[2] = get_unaligned_be16(data + QUADRO_TEMP3) * 10;
 	priv->temp_input[3] = get_unaligned_be16(data + QUADRO_TEMP4) * 10;
 
-	priv->speed_input[0] = get_unaligned_be16(data + QUADRO_FLOW_SPEED);
+	priv->speed_input[0] = get_unaligned_be16(data + QUADRO_FLOW_SPEED) / 10;
 	priv->speed_input[1] = get_unaligned_be16(data + QUADRO_FAN1_SPEED);
 	priv->speed_input[2] = get_unaligned_be16(data + QUADRO_FAN2_SPEED);
 	priv->speed_input[3] = get_unaligned_be16(data + QUADRO_FAN3_SPEED);
