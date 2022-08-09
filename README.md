@@ -1,4 +1,7 @@
 # aquacomputer_quadro-hwmon
+
+## no further developement done here, quadro is supported by [aquacomputer_d5next](https://github.com/aleksamagicka/aquacomputer_d5next-hwmon)
+
 *A hwmon Linux kernel driver for exposing sensors of the Aquacomputer Quadro fan controller.*
 
 Supports reading temperatures and speed, power, voltage and current of attached fans. The speed of the flowmeter is reported in l/h and is only correct after configuration in aquasuite. Being a standard `hwmon` driver, it provides readings via `sysfs`, which are easily accessible through `lm-sensors` as usual:
