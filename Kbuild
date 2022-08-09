@@ -1,1 +1,1 @@
-obj-m += aquacomputer-quadro.o
+obj-m += aquacomputer-octo.o
